@@ -24,7 +24,7 @@ interface HeaderProps {
   updateQuantity: (productId: number, quantity: number) => void;
 }
 
-export const Header = ({ cart, onCartClick, updateQuantity }: HeaderProps) => {
+export const Header = ({ cart, updateQuantity }: HeaderProps) => {
   return (
     <Box
       component="header"

@@ -21,7 +21,6 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   const [quantity, setQuantity] = useState(1);
-  const [imageError, setImageError] = useState(false);
 
   const handleIncrement = () => setQuantity((prev) => Math.min(10, prev + 1));
   const handleDecrement = () => setQuantity((prev) => Math.max(1, prev - 1));
@@ -57,7 +56,6 @@ export const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           height={276}
           width={276}
           alt={product.name}
-          onError={() => setImageError(true)}
           style={{ objectFit: "contain" }}
         />
       </Card.Section>
